@@ -104,7 +104,7 @@ install:
   - rm -f cabal.project.freeze
   - cabal new-build -w ${HC} ${TEST} ${BENCH} --project-file="cabal.project" --dep -j2 all
   - cabal new-build -w ${HC} --disable-tests --disable-benchmarks --project-file="cabal.project" --dep -j2 all
-  - rm -rf "hedgehog"/.ghc.environment.* "hedgehog-example"/.ghc.environment.* "hedgehog-quickcheck"/.ghc.environment.* "hedgehog"/dist "hedgehog-example"/dist "hedgehog-quickcheck"/dist
+  - rm -rf .ghc.environment.* "hedgehog"/dist "hedgehog-example"/dist "hedgehog-quickcheck"/dist
   - DISTDIR=$(mktemp -d /tmp/dist-test.XXXX)
 
 # Here starts the actual work to be performed for the package under test;
